@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: fact_accidents
+    description: "Summarized daily accident data by borough"
+    columns:
+      - name: crash_date
+        tests:
+          - not_null
+
+      - name: borough
+        tests:
+          - not_null:
+              config:
+                severity: warn  # optional if some nulls expected
+
+      - name: total_crashes
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+              config:
+                severity: warn
+
+      - name: total_injuries
+        tests:
+          - not_null
+
+      - name: total_deaths
+        tests:
+          - not_null
+
+  - name: fact_causes
+    description: "Top causes of accidents"
+    columns:
+      - name: cause
+        tests:
+          - not_null
+
+      - name: total_crashes
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: ">= 1"
+              config:
+                severity: warn
+
+  - name: fact_vehicles
+    description: "Top vehicle types involved in crashes"
+    columns:
+      - name: vehicle_type
+        tests:
+          - not_null
+
+      - name: total_crashes
+        tests:
+          - not_null

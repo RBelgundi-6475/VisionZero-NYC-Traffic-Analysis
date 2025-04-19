@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: nyc_traffic_data
+    database: nyc-traffic-analysis-456021
+    schema: nyc_traffic_data
+    tables:
+      - name: raw_crashes
+        description: This table contains the raw data pulled from open NYC API.

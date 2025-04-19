@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg_crashes
+    description: "Cleaned crash data from raw_crashes"
+    columns:
+      - name: crash_date
+        tests:
+          - not_null
+
+      - name: borough
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['BRONX', 'BROOKLYN', 'MANHATTAN', 'QUEENS', 'STATEN ISLAND','UNK']
+
+      - name: num_injured
+        tests:
+          - not_null
+
+      - name: num_killed
+        tests:
+          - not_null

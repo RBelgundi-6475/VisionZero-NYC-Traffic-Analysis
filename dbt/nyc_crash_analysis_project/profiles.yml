@@ -1,0 +1,11 @@
+nyc_gcp:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: nyc-traffic-analysis-456021
+      dataset: nyc_traffic_data
+      threads: 2
+      location: us-east4
+      keyfile: /opt/airflow/gcp/gcp-key.json

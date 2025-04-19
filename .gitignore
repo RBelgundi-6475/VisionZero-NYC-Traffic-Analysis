@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# dbt
+dbt_modules/
+target/
+dbt_packages/
+
+# Airflow
+*.pid
+*.db
+*.log
+logs/
+airflow.cfg
+unittests.cfg
+
+# Docker
+*.sock
+*.tar
+__docker_build/
+
+# GCP credentials (DO NOT COMMIT)
+*.json
+*.key
+
+# OS/IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Looker assets
+*.png
+*.pdf
+
+# Misc
+*.zip
+*.bak

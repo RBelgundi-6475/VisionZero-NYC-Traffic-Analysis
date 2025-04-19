@@ -1,0 +1,10 @@
+name: nyc_crash_analysis_project
+version: '1.0'
+profile: nyc_gcp  # This must match the profile name in your profiles.
+
+models:
+  nyc_crash_analysis_project:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
