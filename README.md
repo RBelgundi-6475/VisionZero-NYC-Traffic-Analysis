@@ -3,6 +3,8 @@
 This project analyzes traffic collision data in New York City as part of the **Vision Zero initiative**, using a modern data engineering stack with **Airflow**, **dbt**, **BigQuery**, and **Looker Studio**. It showcases how to build a fully automated, containerized data pipeline that transforms raw data into actionable insights for public safety.
 
 ---
+## Architecture Diagram
+![VisionZero NYC Architecture](images/architecture_diagram.png)
 
 ## 🔧 Tools & Technologies
 
