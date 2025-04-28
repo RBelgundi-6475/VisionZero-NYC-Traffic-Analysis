@@ -4,7 +4,7 @@ This project analyzes traffic collision data in New York City as part of the **V
 
 ---
 ## Architecture Diagram
-![VisionZero NYC Architecture](images/architecture_diagram.png)
+![VisionZero NYC Architecture](architecture_diagram.png)
 
 ## 🔧 Tools & Technologies
 
